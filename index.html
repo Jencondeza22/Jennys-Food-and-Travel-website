@@ -1,53 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WanderEats - Savory Sojourns</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
 <body>
-    <section>
-      <header>
-         <a href="#" class="logo">Travel</a>
-        <div class="toggle" onclick="toggleMenu();"></div>
-      </header>
-      <link rel="stylesheet" href="css/main.css">
-      <div class="content">
-        <h2>Dream<br>Trip</h2>
-      </div>
-      <div class="play" onclick="videoToggle();">
-        <img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/play.png"><span>Play Video</span>
-      </div>
-      <ul class="sci">
-        <li><a href="#"><img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/facebook.png"></a></li>
-        <li><a href="#"><img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/twitter.png"></a></li>
-        <li><a href="#"><img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/instagram.png"></a></li>
-      </ul>
-      <div class="navigation">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Booking</a></li>
-          <li><a href="#">Tour</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </section>
-    <div class="trailer">
-      <video src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/clip.mp4" controls="true"></video>
-      <img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/close.png" class="close"  onclick="videoToggle();">
+  <!-- Home Section -->
+  <section id="home" class="active">
+    <header>
+      <a href="#" class="logo">WanderEats</a>
+      <div class="toggle" onclick="toggleMenu();"></div>
+    </header>
+    <div class="content">
+      <h2>Savory<br>Sojourns</h2>
     </div>
-    <script type="text/javascript">
-      const toggleMenu = () => {
-        const menuToggle = document.querySelector('.toggle');
-        const navigation = document.querySelector('.navigation');
-        menuToggle.classList.toggle('active');
-        navigation.classList.toggle('active');
-      }
-  
-      const videoToggle = () => {
-        const trailer = document.querySelector('.trailer');
-        const video = document.querySelector('video');
-        trailer.classList.toggle('active');
-        video.currentTime = 0;
-        video.pause();
-        
-      }
-      
-    </script>
-  </body>
-  
+    <div class="play" onclick="videoToggle();">
+      <img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/play.png">
+      <span>Play Video</span>
+    </div>
+    <ul class="sci">
+      <li><a href="https://twitter.com/your_twitter_link" target="_blank"><img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/twitter.png"></a></li>
+      <li><a href="https://www.instagram.com/your_instagram_link" target="_blank"><img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/instagram.png"></a></li>
+      <li><a href="https://www.facebook.com/your_facebook_link" target="_blank"><img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/facebook.png"></a></li>
+    </ul>
+    <div class="navigation">
+      <ul>
+        <li><a href="#home" onclick="toggleSection('home')">Home</a></li>
+        <li><a href="#about" onclick="toggleSection('about')">About</a></li>
+        <li><a href="#foods" onclick="toggleSection('foods')">Foods</a></li>
+        <li><a href="#tour" onclick="toggleSection('tour')">Tour</a></li>
+        <li><a href="#contact" onclick="toggleSection('contact')">Contact</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="content">
+      <h2>About WanderEats</h2>
+      <p>Welcome to WanderEats, your ultimate destination for exploring delightful cuisines and exciting travel adventures.</p>
+    </div>
+  </section>
+
+  <!-- Foods Section -->
+  <section id="foods">
+    <div class="content">
+      <h2>Delicious Foods</h2>
+      <p>Indulge your taste buds with our mouth-watering dishes from around the world.</p>
+    </div>
+  </section>
+
+  <!-- Tour Section -->
+  <section id="tour">
+    <div class="content">
+      <h2>Explore Our Tours</h2>
+      <p>Embark on unforgettable journeys to mesmerizing destinations with our expertly curated tours.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="content">
+      <h2>Contact Us</h2>
+      <p>Feel free to reach out to us for any inquiries, suggestions, or collaborations.</p>
+    </div>
+  </section>
+
+  <!-- Video Trailer Section -->
+  <div class="trailer">
+    <video src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/clip.mp4" controls></video>
+    <img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/close.png" class="close" onclick="videoToggle();">
+  </div>
+
+  <script>
+    const toggleMenu = () => {
+      const menuToggle = document.querySelector('.toggle');
+      const navigation = document.querySelector('.navigation');
+      menuToggle.classList.toggle('active');
+      navigation.classList.toggle('active');
+    }
+
+    const videoToggle = () => {
+      const trailer = document.querySelector('.trailer');
+      const video = document.querySelector('video');
+      trailer.classList.toggle('active');
+      video.currentTime = 0;
+      video.pause();
+    }
+
+    const toggleSection = (sectionId) => {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      const sectionToShow = document.getElementById(sectionId);
+      sectionToShow.classList.add('active');
+    }
+  </script>
+</body>
+</html>
+

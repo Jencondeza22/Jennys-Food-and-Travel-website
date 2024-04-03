@@ -19,7 +19,7 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-} 
+}
 
 header {
   position: absolute;
@@ -205,3 +205,23 @@ header .toggle.active {
     max-width: 90%;
   }
 }
+
+#about {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-OowHqrdVcD1AqFjug8hTRDfCZhgnS626DPGHVtJk5Q&s');
+}
+
+#foods {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pancit_Ilonggo_Style_-_12110747826.jpg/1200px-Pancit_Ilonggo_Style_-_12110747826.jpg');
+}
+
+#tour {
+  background-image: url('https://live.staticflickr.com/8856/17788497923_8fbc4a66f6_b.jpg');
+}
+
+#contact {
+  background-image: url('https://live.staticflickr.com/5595/14773846293_8d676be7be_b.jpg');
+}
+
+
+
+

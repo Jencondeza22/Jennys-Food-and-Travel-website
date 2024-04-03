@@ -14,7 +14,7 @@ section {
   justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
-  background: url(https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/bg.jpg), url(https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/mask.jpg);
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPrdNyueEGttg9qU5Zj9VbB_JTPXvXCbmjjcwMJnI8U0U6ooWHFilF_XF6iqZp7-kLgA0&usqp=CAU), url(https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Travel%20Website/mask.jpg);
   background-blend-mode: screen;
   background-size: cover;
   background-position: center;
